@@ -1,5 +1,8 @@
-{
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.linting.pylintPath": "${workspaceFolder}\\env\\Scripts\\pylint.exe",
-}
+// {
+//     "python.linting.pylintEnabled": true,
+//     "python.linting.enabled": true,
+//     "python.linting.pylintArgs": [
+//         "--load-plugins=pylint_django"
+//     ],
+//     "python.linting.pylintPath": "${workspaceFolder}\\env\\Scripts\\pylint.exe",
+// }
