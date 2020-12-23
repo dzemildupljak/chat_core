@@ -6,9 +6,13 @@ from chat_api.models import Message
 
 class MessageSerializer(serializers.ModelSerializer):
     sender = serializers.SlugRelatedField(
-        many=False, slug_field='username', queryset=User.objects.all())
+        many=False, slug_field='id', queryset=User.objects.all())
     receiver = serializers.SlugRelatedField(
-        many=False, slug_field='username', queryset=User.objects.all())
+        many=False, slug_field='id', queryset=User.objects.all())
+    # sender = serializers.SlugRelatedField(
+    #     many=False, slug_field='username', queryset=User.objects.all())
+    # receiver = serializers.SlugRelatedField(
+    #     many=False, slug_field='username', queryset=User.objects.all())
     timestamp = serializers.DateTimeField(default=datetime.datetime.now())
 
     class Meta:

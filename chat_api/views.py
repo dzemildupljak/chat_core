@@ -21,7 +21,8 @@ class MessageApi(APIView):
         reverse_serializer = MessageSerializer(revers_messages, many=True)
         serializer = list(serializer.data)
         serializer.extend(list(reverse_serializer.data))
-        return Response(serializer)
+        ser = sorted(serializer, key=lambda i: i['timestamp'])
+        return Response(ser)
 
     def post(self, request):
         """
